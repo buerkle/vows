@@ -180,6 +180,7 @@ if (! options.watch) {
         }
     };
     reporter.reset = function () { _reporter.reset && _reporter.reset() };
+    vows.reporter = _reporter;
 
     files = args.map(function (a) {
         return path.join(process.cwd(), a.replace(fileExt, ''));
